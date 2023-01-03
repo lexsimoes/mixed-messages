@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixed-Messages</title>
+  <link rel="stylesheet" href="./style.css">
+  <script scr="./script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1> Welcome to Mixed Messages</h1>
+    <h2> Get yourself a bit of motivation to continue to code</h2>
+  </header>
+
+  <main>
+    <div class="outer-div">
+      <div class="inner-div-top">
+        <div class="button">
+          <button id="generate-message">
+            <p>Generate</p>
+            <p>Your Special Message</p>
+          </button>
+        </div>
+        <div class="user-choices">
+          <div>
+            <h2>Message Category</h2>
+          </div>
+          <div class="message-choices">
+            <div>
+              <input type="radio" id="codeMessage" name="Messages" value="Code">
+              <label for="Code">Code</label>
+              <input type="radio" id="funnyMessage" name="Messages" value="Funny">
+              <label for="Funny">Funny</label>
+            </div>
+            <div>
+              <input type="radio" id="famousMessage" name="Messages" value="Famous">
+              <label for="Famous">Famous</label>
+              <input type="radio" id="lifeMessage" name="Messages" value="Life">
+              <label for="Life">Life</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="inner-div-bottom">
+        <div class="quote-div">
+          <p class="quote-example">Message:</p>
+          <p class="quote-text" id="quote-text"></p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
