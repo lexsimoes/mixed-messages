@@ -1,26 +1,21 @@
-const generateButton = document.getElementById("generate-quote");
+const generateButton = document.getElementById("generate-message");
 const quoteEl = document.getElementById("quote-text");
 
 const quotes = {
   funQuotes: [
-    "“Clothes make the man. Naked people have little or no influence in society."
-—Mark Twain",
-    "“Before you marry a person, you should first make them use a computer with slow Internet to see who they really are.”
-    —Will Ferrell",
-    "“I love being married. It's so great to find that one special person you want to annoy for the rest of your life.”
-    —Rita Rudner",
-    "“Ned, I would love to stand here and talk with you—but I’m not going to.”
-    —Phil Connors (Bill Murray)",
-    "“I’m not superstitious, but I am a little stitious.”
-    —Michael Scott (Steve Carrell), The Office"
+    "Clothes make the man. Naked people have little or no influence in society —Mark Twain",
+    "Before you marry a person, you should first make them use a computer with slow Internet to see who they really are. —Will Ferrell",
+    "I love being married. It's so great to find that one special person you want to annoy for the rest of your life. —Rita Rudner",
+    "Ned, I would love to stand here and talk with you—but I’m not going to. —Phil Connors (Bill Murray)",
+    "I’m not superstitious, but I am a little stitious. — Michael Scott (Steve Carrell), The Office"
   ],
 
     codeQuotes: [
-      "Software is like sex: it’s better when it’s free. – Linus Torvalds",
+      "Software is like sex: its better when its free. – Linus Torvalds",
       "If we want users to like our software, we should design it to behave like a likable person.  – Alan Cooper",
       "Quality is a product of a conflict between programmers and testers. ― Yegor Bugayenk",
       "Everybody should learn to program a computer because it teaches you how to think. – Steve Jobs",
-      "I’m not a great programmer; I’m just a good programmer with great habits. ― Kent Beck"
+      "Im not a great programmer; Im just a good programmer with great habits. ― Kent Beck"
     ],
 
     famousQuotes: [
@@ -41,32 +36,31 @@ const quotes = {
 
 };
 
-let previousRanNu = 0;
+let previousRanNum = 0;
 let newRanNum = 0;
 
 const randomNum = () => {
-  while(previousRanNu === newRanNum) {
-    newRanNum = Math.floor(Math.random() * 5);
+  while(previousRanNum === newRanNum) {
+    newRanNum = Math.floor(Math.random()* 5);
   }
-    previousRanNu = newRanNum;
-    return newRanNum;
+    previousRanNum = newRanNum
+    return newRanNum
 };
 
-generateButton.addEventListener("click", fuction(){
-    const quoteType = document.querySelector('input[name="Quotes"]:checked');
-    switch (quoteType.value) {
-      case 'Code':
+generateButton.addEventListener("click", function(){
+    const quoteType = document.querySelector('input[name="Messages"]:checked');
+    switch (quoteType.value){
+      case "Code":
           quoteEl.innerHTML = quotes.codeQuotes[randomNum()];
         break;
-
-      case 'Fun':
+      case "Funny":
           quoteEl.innerHTML = quotes.funQuotes[randomNum()];
           break;
-      case 'Famous':
+      case "Famous":
           quoteEl.innerHTML = quotes.famousQuotes[randomNum()];
           break;
-      case 'Life':
+      case "Life":
           quoteEl.innerHTML = quotes.lifeQuotes[randomNum()];
           break;
     }
-});
+})
