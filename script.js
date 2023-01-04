@@ -11,7 +11,7 @@ const quotes = {
   ],
 
     codeQuotes: [
-      "Software is like sex: its better when its free. – Linus Torvalds",
+       
       "If we want users to like our software, we should design it to behave like a likable person.  – Alan Cooper",
       "Quality is a product of a conflict between programmers and testers. ― Yegor Bugayenk",
       "Everybody should learn to program a computer because it teaches you how to think. – Steve Jobs",
